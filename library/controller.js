@@ -1,0 +1,1 @@
+Profiledata = new Mongo.Collection("profiledata");

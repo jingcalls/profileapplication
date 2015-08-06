@@ -1,0 +1,63 @@
+<template name="mainpage">
+	<h1>Profile Application</h1>
+	<center>
+		<div class="input-control text" id="inputbox" data-role="input">
+			<input type="text" placeholder="Name" class="name" id="txtbox">
+			<input type="text" placeholder="Age" class="age" id="txtbox">
+			<input type="text" placeholder="Course" class="course" id="txtbox">
+			<input type="text" placeholder="Address" class="address" id="txtbox">
+			<input type="text" placeholder="Contact Number" class="contact" id="txtbox">
+			<div>
+				<button class="button primary btnsave" id="txtbox">Save</button>
+			</div>
+		</div>
+	</center>
+</template>
+
+<template name="userdata">
+{{#each profiledata}}
+	<center>
+		<div id="txtbox" >
+			<table class="table hovered" style="margin-top:50px;">
+				<td id="tablesize">
+					<b><thead>NAME</thead></b>
+					<tr>
+						{{Name}}
+					</tr>
+				</td>
+				<td id="tablesize">
+					<b><thead>AGE</thead></b>
+					<tr>
+						{{Age}}
+					</tr>
+				</td>
+				<td id="tablesize">
+					<b><thead>COURSE</thead></b>
+					<tr>
+						{{Course}}
+					</tr>
+				</td>
+				<td id="tablesize">
+					<b><thead>ADDRESS</thead></b>
+					<tr>
+						{{Address}}
+					</tr>
+				</td>
+				<td id="tablesize">
+					<b><thead>CONTACT NUMBER</thead></b>
+					<tr>
+						{{Contact}}
+					</tr>
+				</td>
+
+				<td id="tablesize">
+					<b><thead>OPTIONS</thead></b>
+					<tr>
+						<button class="button danger btndelete">Delete</button>
+					</tr>
+				</td>
+			</table>
+		</div>
+	</center>
+{{/each}}
+</template>
